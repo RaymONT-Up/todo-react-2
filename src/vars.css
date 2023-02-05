@@ -1,0 +1,16 @@
+:root {
+  --background-color: #222222;
+
+  --text-color: #f4f4f4;
+  --text-color-2: rgba(255, 255, 255, 0.6);
+
+  --card-shadow: 16px 16px 20pix rgba(0, 0, 0, 0.15),
+    -8px -8px 20px rgba(255, 255, 255, 0.05);
+  --card-background-color: #282828;
+
+  --task-completed-color: #10c200;
+  --task-not-completed-color: #366eff;
+  --task-high-priority: #ff0000;
+  --task-medium-priority: #ffeb33;
+  --task-empty-priority: #a9a9a9;
+}

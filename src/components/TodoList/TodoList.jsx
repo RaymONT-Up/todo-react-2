@@ -1,9 +1,20 @@
+import Card from "../UI/Card/Card";
 import TodoItem from "./TodoItem/TodoItem";
 import styles from "./TodoList.module.css";
 
 const todoItemsInfo = [
-  { id: "1", name: "Buy eggs", completed: true },
-  { id: "2", name: "Buy bananas", completed: false },
+  {
+    id: "1",
+    name: "Buy eggs",
+    description: "But 2 eggs for my food",
+    isDone: true,
+  },
+  {
+    id: "2",
+    name: "Buy bananas",
+    description: "Banana is good for healthy",
+    isDone: false,
+  },
 ];
 
 const TodoList = props => {
@@ -13,15 +24,16 @@ const TodoList = props => {
         name={item.name}
         key={item.id}
         id={item.id}
-        completed={item.completed}
+        description={item.description}
+        isDone={item.isDone}
       />
     );
   });
 
   return (
-    <div>
+    <Card>
       <ul>{todoItems}</ul>
-    </div>
+    </Card>
   );
 };
 export default TodoList;
