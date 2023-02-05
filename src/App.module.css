@@ -1,0 +1,20 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.title {
+  margin: 50px 0 10px 0;
+
+  text-align: center;
+
+  color: darkblue;
+}
+.subtitle {
+  margin-bottom: 50px;
+
+  text-align: center;
+}
+.subtitle__accent {
+  color: darkblue;
+}
