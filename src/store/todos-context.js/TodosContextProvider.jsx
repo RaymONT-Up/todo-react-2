@@ -8,7 +8,6 @@ const defaultTodosState = {
 };
 
 const TodosReducer = (state, action) => {
-  debugger;
   if (action.type === ADD_ITEM) {
     return {
       items: [...state.items, action.item],
