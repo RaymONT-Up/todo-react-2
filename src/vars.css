@@ -2,6 +2,7 @@
   --background-color: #222222;
 
   --text-color: #f4f4f4;
+  --text-color-RGB: 244, 244, 244;
   --text-color-2: rgba(255, 255, 255, 0.6);
 
   --card-shadow: 16px 16px 20pix rgba(0, 0, 0, 0.15),
@@ -13,4 +14,8 @@
   --task-high-priority: #ff0000;
   --task-medium-priority: #ffeb33;
   --task-empty-priority: #a9a9a9;
+
+  --input-background-color: rgba(108, 108, 108, 0.5);
+
+  --button-background-color: rgba(0, 0, 0, 0.5);
 }

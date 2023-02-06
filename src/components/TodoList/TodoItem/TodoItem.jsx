@@ -3,7 +3,6 @@ import TodoItemPriority from "./TodoItemPriority/TodoItemPriority";
 import TodoItemToggle from "./TodoItemToggle/TodoItemToggle";
 
 const TodoItem = props => {
-  console.log(props);
   return (
     <li className={styles.item}>
       <TodoItemPriority />

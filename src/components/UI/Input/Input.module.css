@@ -1,0 +1,22 @@
+.input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(var(--text-color-RGB), 0.1);
+
+  text-align: center;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: var(--text-color);
+  background-color: var(--input-background-color);
+  box-shadow: var(--card-shadow);
+}
+.input::placeholder {
+  opacity: 0.6;
+}
