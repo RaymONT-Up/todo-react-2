@@ -11,16 +11,18 @@ const AddTodoForm = props => {
   const context = useContext(TodosContext);
 
   const taskNameRef = useRef();
-  // const taskDescriptionRef = useRef();
+  const taskDescriptionRef = useRef();
 
   const submitTaskFormHandler = event => {
     event.preventDefault();
 
     const name = taskNameRef.current.value;
+    const description = taskDescriptionRef.current.value;
     if (name.trim().length > 0) {
       const item = {
         id: Math.random(),
         name,
+        description,
         isDone: false,
       };
 
@@ -40,11 +42,11 @@ const AddTodoForm = props => {
           min="1"
           placeholder="Task name"
         />
-        {/* <Textarea
+        <Textarea
           ref={taskDescriptionRef}
           className={styles.input}
           placeholder="Task description"
-        ></Textarea> */}
+        ></Textarea>
         <Button onClick={submitTaskFormHandler}>Add task</Button>
       </form>
     </Card>

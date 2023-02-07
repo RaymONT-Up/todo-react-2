@@ -6,6 +6,11 @@ import styles from "./TodoList.module.css";
 
 const TodoList = props => {
   const context = useContext(TodosContext);
+
+  const toggleItemDoneHandler = id => {
+    context.toggleItemDone(id);
+  };
+
   const todoItems = context.items.map(item => {
     return (
       <TodoItem
@@ -14,6 +19,9 @@ const TodoList = props => {
         id={item.id}
         description={item.description}
         isDone={item.isDone}
+        onToggleItemDone={() => {
+          toggleItemDoneHandler(item.id);
+        }}
       />
     );
   });

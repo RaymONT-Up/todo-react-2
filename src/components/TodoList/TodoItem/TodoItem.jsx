@@ -2,9 +2,8 @@ import { useState } from "react";
 import styles from "./TodoItem.module.css";
 import TodoItemPrevInfo from "./TodoItemPrevInfo/TodoItemPrevInfo";
 import TodoItemPriority from "./TodoItemPriority/TodoItemPriority";
-import TodoItemToggle from "./TodoItemToggle/TodoItemToggle";
-import ModalWindow from "../../UI/ModalWindow/ModalWindow";
 import TodoItemModal from "./TodoItemModal/TodoItemModal";
+import TodoItemCheckbox from "./TodoItemCheckbox/TodoItemCheckbox";
 const TodoItem = props => {
   const [modalWindowState, setModalWindowState] = useState(false);
 
@@ -19,7 +18,8 @@ const TodoItem = props => {
           onClose={modalWindowHandler}
           name={props.name}
           description={props.description}
-          isDone={props.isDone}
+          onChange={props.onToggleItemDone}
+          value={props.isDone}
         />
       )}
       <TodoItemPriority />
@@ -28,7 +28,10 @@ const TodoItem = props => {
         name={props.name}
         description={props.description}
       />
-      <TodoItemToggle isDone={props.isDone} />
+      <TodoItemCheckbox
+        onChange={props.onToggleItemDone}
+        value={props.isDone}
+      />
     </li>
   );
 };
