@@ -1,0 +1,9 @@
+.line {
+  width: 100%;
+  min-height: 2px;
+  height: 2px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: var(--text-color);
+  opacity: 0.6;
+}

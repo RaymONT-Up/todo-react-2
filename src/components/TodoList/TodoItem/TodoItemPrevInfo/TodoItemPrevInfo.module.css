@@ -1,15 +1,24 @@
-.item:not(:last-child) {
-  margin-bottom: 15px;
+.item__info {
+  cursor: pointer;
 }
 
 .item__name {
-  margin-bottom: 2px;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 300px;
+  text-overflow: ellipsis;
 
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
 }
 .item__description {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 300px;
+  text-overflow: ellipsis;
+
   font-weight: 300;
   font-size: 14px;
   line-height: 17px;

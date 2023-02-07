@@ -9,8 +9,6 @@
     -8px -8px 20px rgba(255, 255, 255, 0.05);
   --card-background-color: #282828;
 
-  --task-completed-color: #10c200;
-  --task-not-completed-color: #366eff;
   --task-high-priority: #ff0000;
   --task-medium-priority: #ffeb33;
   --task-empty-priority: #a9a9a9;
@@ -20,5 +18,10 @@
   --button-background-color: rgba(0, 0, 0, 0.5);
 
   --scroll-color-thumb: #ffffff61;
-  --scroll-color-track: #00000000;
+  --scroll-color-track: transparent;
+
+  --checkbox-border-color: #366eff;
+  --checkbox-inside-color: #10c200;
+
+  --todo-item-prev-info-width: ;
 }

@@ -1,7 +1,10 @@
 .card {
   margin-bottom: 20px;
 }
-
+.textarea {
+  height: 105px;
+  margin-bottom: 15px;
+}
 .input {
   margin-bottom: 15px;
 }

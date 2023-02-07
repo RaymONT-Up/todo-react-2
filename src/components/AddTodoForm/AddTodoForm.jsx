@@ -44,7 +44,7 @@ const AddTodoForm = props => {
         />
         <Textarea
           ref={taskDescriptionRef}
-          className={styles.input}
+          className={styles.textarea}
           placeholder="Task description"
         ></Textarea>
         <Button onClick={submitTaskFormHandler}>Add task</Button>
