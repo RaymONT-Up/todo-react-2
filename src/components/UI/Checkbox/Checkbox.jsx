@@ -1,16 +1,17 @@
 import styles from "./Checkbox.module.css";
 const Checkbox = props => {
-  const classes = `${styles.checkbox} ${
-    !!props.className ? props.className : ""
-  }`;
+  const classes = `${styles.label} ${!!props.className ? props.className : ""}`;
 
   return (
-    <input
-      className={classes}
-      checked={props.value}
-      onChange={props.onChange}
-      type="checkbox"
-    />
+    <label className={classes}>
+      <input
+        className={styles.input}
+        checked={props.value}
+        onChange={props.onChange}
+        type="checkbox"
+      />
+      <span className={styles.checkbox}></span>
+    </label>
   );
 };
 export default Checkbox;

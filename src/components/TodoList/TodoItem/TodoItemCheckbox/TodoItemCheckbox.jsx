@@ -1,5 +1,3 @@
-// import styles from "./TodoItemCheckbox.module.css";
-
 import Checkbox from "../../../UI/Checkbox/Checkbox";
 
 const TodoItemCheckbox = props => {
