@@ -36,9 +36,26 @@ button {
   border: 0;
 }
 
-input {
+input,
+textarea {
   outline: none;
 }
-input:focus-visible {
+input:focus-visible,
+textarea:focus-visible {
   outline: none;
+}
+
+/* ScrollBar */
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-color-thumb);
+}
+
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+*::-webkit-scrollbar-track {
+  transition: all 1s;
+
+  background-color: var(--scroll-color-track);
 }

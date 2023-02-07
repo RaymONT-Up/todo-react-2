@@ -5,22 +5,28 @@ import Card from "../UI/Card/Card";
 import Button from "../UI/Button/Button";
 import { useContext, useRef } from "react";
 import TodosContext from "../../store/todos-context.js/TodosContext";
+import Textarea from "../UI/Textarea/Textarea";
 
 const AddTodoForm = props => {
   const context = useContext(TodosContext);
+
   const taskNameRef = useRef();
+  // const taskDescriptionRef = useRef();
 
   const submitTaskFormHandler = event => {
     event.preventDefault();
 
     const name = taskNameRef.current.value;
-    const item = {
-      id: Math.random(),
-      name,
-      isDone: false,
-    };
+    if (name.trim().length > 0) {
+      const item = {
+        id: Math.random(),
+        name,
+        isDone: false,
+      };
 
-    context.addItem(item);
+      context.addItem(item);
+    }
+    return;
   };
 
   return (
@@ -32,8 +38,13 @@ const AddTodoForm = props => {
           type="text"
           required
           min="1"
-          placeholder="Write the task"
+          placeholder="Task name"
         />
+        {/* <Textarea
+          ref={taskDescriptionRef}
+          className={styles.input}
+          placeholder="Task description"
+        ></Textarea> */}
         <Button onClick={submitTaskFormHandler}>Add task</Button>
       </form>
     </Card>
